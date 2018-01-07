@@ -1,0 +1,258 @@
+
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Admin | Archivo</title>
+    <!-- Bootstrap core CSS -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+    <script type="http://cdn/ckeditor.com/4.6.1/standard/ckeditor.js"></script>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="http://getbootstrap.com/docs/3.3/examples/starter-template/#">MedicalCenter</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">Tablero</a></li>
+            <li><a href="agenda.html">Agenda</a></li>
+            <li><a href="accounting.html">Contabilidad</a></li>
+            <li class="active"><a href="records.html">Archivo</a></li>
+            <li><a href="stats.html">Estadísticas</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Bienvenido, Sergio</a></li>
+            <li><a href="login.html">Salir</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+
+    <header id="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-10">
+            <h1><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Archivo <small>Administra los historiales médicos</small> </h1>
+          </div>
+          <div class="col-md-2">
+            <div class="dropdown create">
+              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                Crear Contenido
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li><a type="button" data-toggle="modal" data-target="#addEvent">Evento en Agenda</a></li>
+                <li><a href="#">Insumo en Contabilidad</a></li>
+                <li><a href="#">Paciente en Archivo</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+
+    <section id="breadcrumb">
+      <div class="container">
+        <ol class="breadcrumb">
+          <li><a href="index.html">Tablero</a></li>
+          <li class="active">Archivos</li>
+        </ol>
+      </div>
+    </section>
+
+
+    <section id="main">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="list-group">
+              <a href="index.html" class="list-group-item active main-color-bg">
+                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Tablero
+              </a>
+              <a href="agenda.html" class="list-group-item">
+                <span class="glyphicon glyphicon-book" aria-hidden="true"></span> Agenda <span class="badge">12</span>
+              </a>
+              <a href="accounting.html" class="list-group-item">
+                <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Contabilidad <span class="badge">12</span>
+              </a>
+              <a href="records.html" class="list-group-item">
+                <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span> Archivo <span class="badge">12</span>
+              </a>
+              <a href="stats.html" class="list-group-item">
+                <span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Estadísticas
+              </a>
+            </div>
+
+            <div class="well">
+              <h4>Espacio Usado en Disco</h4>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                  60%
+                </div>
+              </div>
+              <h4>Ancho de Banda</h4>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
+                  40%
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-9">
+            <div class="panel panel-default">
+              <div class="panel-heading main-color-bg">
+                <h3 class="panel-title">Archivo</h3>
+              </div>
+              <div class="panel-body">
+                <div class="row">
+                  <div class="col-md-12">
+                    <input type="text" class="form-control" placeholder="Filtrar Pacientes...">
+                  </div>
+                </div>
+                <br>
+                <table class="table table-striped table-hover">
+                  <tr>
+                    <th>Cliente</th>
+                    <th>Paciente</th>
+                    <th>Especie</th>
+                    <th>Raza</th>
+                    <th>No. Contacto</th>
+                    <th>eMail</th>
+                    <th></th>
+                  </tr>
+                  <tr>
+                    <td>Leslie Chim Sánchez</td>
+                    <td>Linus</td>
+                    <td>Perro</td>
+                    <td>Chihuahua</td>
+                    <td>9993215959</td>
+                    <td>leslie.csz@gmail.com</td>
+                    <td><a class="btn btn-default" href="edit.html">Edit</a><a class="btn btn-danger" href="#">Borrar</a></td>
+                  </tr>
+                  <tr>
+                    <td>Leonel Patrón Cocom</td>
+                    <td>Gunter</td>
+                    <td>Perro</td>
+                    <td>Pastor Malinois</td>
+                    <td>9831233</td>
+                    <td>jl.patron@hotmail.com</td>
+                    <td><a class="btn btn-default" href="edit.html">Edit</a><a class="btn btn-danger" href="#">Borrar</a></td>
+                  </tr>
+                  <tr>
+                    <td>Francisco Costés Ruz</td>
+                    <td>Lady</td>
+                    <td>Perro</td>
+                    <td>Única</td>
+                    <td>9993140229</td>
+                    <td>jruz@kwantec.com</td>
+                    <td><a class="btn btn-default" href="edit.html">Edit</a><a class="btn btn-danger" href="#">Borrar</a></td>
+                  </tr>
+                  <tr>
+                    <td>Leonel Patrón Cocom</td>
+                    <td>Negro</td>
+                    <td>Perro</td>
+                    <td>Pastor Malinois</td>
+                    <td>9831233</td>
+                    <td>jl.patron@hotmail.com</td>
+                    <td><a class="btn btn-default" href="edit.html">Edit</a><a class="btn btn-danger" href="#">Borrar</a></td>
+                  </tr>
+                  <tr>
+                    <td>Leonel Patrón Cocom</td>
+                    <td>Paris</td>
+                    <td>Perro</td>
+                    <td>Pastor Malinois</td>
+                    <td>9831233</td>
+                    <td>jl.patron@hotmail.com</td>
+                    <td><a class="btn btn-default" href="edit.html">Edit</a><a class="btn btn-danger" href="#">Borrar</a></td>
+                  </tr>
+                  <tr>
+                    <td>Laura Zúñiga Canto</td>
+                    <td>Coco</td>
+                    <td>Perro</td>
+                    <td>Cocker</td>
+                    <td>9992567299</td>
+                    <td>laura.zuniga.canto@quebedo.com</td>
+                    <td><a class="btn btn-default" href="edit.html">Edit</a><a class="btn btn-danger" href="#">Borrar</a></td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <footer id="footer">
+      <p>Copyright MedicalCenter, &copy; 2017</p>
+    </footer>
+
+    <!-- Modals -->
+    <!-- Event -->
+    <div class="modal fade" id="addEvent" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <form>
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+              <h4 class="modal-title" id="myModalLabel">Agregar Evento a la Agenda</h4>
+            </div>
+            <div class="modal-body">
+              <div class="form-group">
+                <label>Evento</label>
+                <input type="text" class="form-control" placeholder="Nombre del Evento">
+              </div>
+              <div class="form-group">
+                <label>Descripción</label>
+                <textarea name="editor1" class="form-control" placeholder="Detalles del Evento"></textarea>
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox"> Publicar
+                  </label>
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Dirección</label>
+                <input type="text" class="form-control" placeholder="Dirección del Evento">
+              </div>
+              <div class="form-group">
+                <label>Fecha</label>
+                <input type="text" class="form-control" placeholder="Fecha del Evento">
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="submit" class="btn btn-primary">Save Changes</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      
+    </div>
+
+    <script>
+      CKEDITOR.replace('editor1');
+    </script>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+  </body>
+</html>
